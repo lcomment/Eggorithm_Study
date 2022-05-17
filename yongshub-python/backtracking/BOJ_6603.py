@@ -15,8 +15,8 @@ while True:
 def solution(k, testCase):
     if(k == 6):  # 6번째라면
         res = arr[:6]
-        res.sort() # 정렬 후
-        result.append(tuple(res)) # result에 추가
+        res.sort()  # 정렬 후
+        result.append(tuple(res))  # result에 추가
         return None
 
     for i in testCase:
@@ -28,9 +28,9 @@ def solution(k, testCase):
 
 
 for testCase in testCases:
-    solution(0, testCase[1:])
-    result = set(result) # 중복된 요소 제거
-    result = sorted(result) # 정렬
+    solution(0, testCase[1:])  # 1:
+    result = set(result)  # 중복된 요소 제거
+    result = sorted(result)  # 정렬
     for res in result:
         print(*res)
     print()
