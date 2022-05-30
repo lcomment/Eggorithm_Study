@@ -1,6 +1,6 @@
 package dataStructure;
 
-// BOJ - 9935번 문자열 폭발 
+// BOJ - 9935번 문자열 폭발 (미완성)
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
