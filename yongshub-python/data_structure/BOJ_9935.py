@@ -6,7 +6,7 @@ length = len(bomb)
 stack = []
 lastChar = bomb[-1]
 
-for char in inputs:
+for char in inputs:  # mirkovC4nizCC44
     stack.append(char)
     if char == lastChar and ''.join(stack[-length:]) == bomb:
         del stack[-length:]
@@ -17,11 +17,14 @@ if answer == '':
 else:
     print(answer)
 
+a = [1, 2, 3, 4, 5]
+a[1:3] = [2, 3]
+a[-3:] = [3, 4, 5]
+stack = [1, 2, 3, 4, 5]
 # -> 시간 초과 코드
 # while True:
 #     if bomb not in inputs:
 #         break
-
 #     for i in range(len(inputs)):
 #         if i + length <= len(inputs) and inputs[i: i + length] == bomb:
 #             inputs = inputs.replace(bomb, "")
