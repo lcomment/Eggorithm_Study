@@ -5,6 +5,8 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class BOJ_2812 {
 
@@ -16,35 +18,54 @@ public class BOJ_2812 {
 		int K = Integer.parseInt(input[1]);
 		
 		String num = br.readLine();
-		StringBuilder sb = new StringBuilder(num);
+		StringBuilder sb = new StringBuilder();
 		int length = num.length() - K;
 		
-		int idx = 1;
-		while(K>0 && idx != sb.length()) {
-			if(sb.charAt(idx-1) < sb.charAt(idx)) {
-				if(idx == 1) 
-					sb.deleteCharAt(0);
-				else {
-					sb.deleteCharAt(idx-1);
-					idx--;
-				}
+		Deque<Character> deque = new LinkedList<>();
+		
+		for(int i=0 ; i<num.length() ; i++) {
+			while(K>0 && !deque.isEmpty() && deque.peekLast() < num.charAt(i)) {
+				deque.pollLast();
 				K--;
 			}
-			else
-				idx++;
-
-			//bw.write(Integer.toString(idx) + " "+ sb.toString() + "\n");
+			
+			deque.offer(num.charAt(i));
 		}
-		if(sb.length() > length) {
-			//bw.write();
-			bw.write(sb.substring(0, length));
-			sb.setLength(0);
-			//System.out.println();
+		
+		while(!deque.isEmpty() && sb.length() < length)
+			sb.append(deque.poll());
 
-		}
-		bw.write(sb.toString());
-		bw.flush();
-		bw.close();
-		br.close();
+		System.out.println(sb.toString());
+
+		
+		
+//		int idx = 1;
+//		while(K>0 && idx != sb.length()) {
+//			if(sb.charAt(idx-1) < sb.charAt(idx)) {
+//				if(idx == 1) 
+//					sb.deleteCharAt(0);
+//				else {
+//					sb.deleteCharAt(idx-1);
+//					idx--;
+//				}
+//				K--;
+//			}
+//			else {
+//				idx++;
+//			}
+//
+//			//bw.write(Integer.toString(idx) + " "+ sb.toString() + "\n");
+//		}
+//		if(sb.length() > length) {
+//			//bw.write();
+//			bw.write(sb.substring(0, length));
+//			sb.setLength(0);
+//			//System.out.println();
+//
+//		}
+//		bw.write(sb.toString());
+//		bw.flush();
+//		bw.close();
+//		br.close();
 	}
 }
