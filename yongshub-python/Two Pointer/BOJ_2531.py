@@ -13,7 +13,7 @@ for i in range(N):
     end = i  # 처음 가리키는 end 인덱스
     cnt = 0
     case = set()
-    while cnt < k:  # cnt가 k보다 작을 때
+    while cnt < k:  # cnt가 k보다 작을 때 k개를 만족해야하잖아 -> 생각안하고 
         case.add(sushi[end % N])
         end += 1
         cnt += 1
