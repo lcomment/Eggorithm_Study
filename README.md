@@ -24,3 +24,4 @@
 |22.06.20 - 1|Greedy|[BOJ 1543 문서 검색](https://www.acmicpc.net/problem/1543)|[BOJ 1700 멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)|[BOJ 2812 크게 만들기](https://www.acmicpc.net/problem/2812)|
 |22.06.20 - 2|DP|[BOJ 13301 타일 장식물](https://www.acmicpc.net/problem/13301)|[BOJ 17404 RGB거리 2](https://www.acmicpc.net/problem/17404)|
 |22.06.28|-|[BOJ 3187 양치기 꿍](https://www.acmicpc.net/problem/3187)|[BOJ 13904 과제](https://www.acmicpc.net/problem/13904)|[BOJ 16928 뱀과 사다리 게임](https://www.acmicpc.net/problem/16928)|[BOJ 17070 파이프 옮기기1](https://www.acmicpc.net/problem/17070)|
+|22.07.05|-|[BOJ 1049 기타줄](https://www.acmicpc.net/problem/1049)|[BOJ 1388 바닥 장식](https://www.acmicpc.net/problem/1388)|[BOJ 9252 LCS 2](https://www.acmicpc.net/problem/9252)|[BOJ 17142 연구소3](https://www.acmicpc.net/problem/17142)|
