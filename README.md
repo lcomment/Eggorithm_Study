@@ -14,8 +14,8 @@
 - 프로그래머스: PG 문제번호 문제이름
 
 ## 📚 Solved List
-|Day|Algorithm|Q1|Q2|Q3|
-|---|---------|--|--|--|
+|Day|Algorithm|Q1|Q2|Q3|Q4|
+|---|---------|--|--|--|--|
 |22.05.09|DFS & BFS|[BOJ 2638 치즈](https://www.acmicpc.net/problem/2638)|[BOJ 17471 게리맨더링](https://www.acmicpc.net/problem/17471)|
 |22.05.17|Backtracking|[BOJ 1987 알파벳](https://www.acmicpc.net/problem/1987)|[BOJ 6603 로또](https://www.acmicpc.net/problem/6603)|[BOJ 10971 외판원 순회2](https://www.acmicpc.net/problem/10971)|
 |22.05.23|Two Pointer|[BOJ 7795 먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)|[BOJ 2531 회전초밥](https://www.acmicpc.net/problem/2531)|[BOJ 10971 로봇 프로젝트](https://www.acmicpc.net/problem/3649)|
@@ -23,3 +23,5 @@
 |22.06.06|DFS & BFS|[BOJ 1303 전쟁 - 전투](https://www.acmicpc.net/problem/1303)|[BOJ 2660 회장뽑기](https://www.acmicpc.net/problem/2660)|[BOJ 6087 레이저 통신](https://www.acmicpc.net/problem/6087)|
 |22.06.20 - 1|Greedy|[BOJ 1543 문서 검색](https://www.acmicpc.net/problem/1543)|[BOJ 1700 멀티탭 스케줄링](https://www.acmicpc.net/problem/1700)|[BOJ 2812 크게 만들기](https://www.acmicpc.net/problem/2812)|
 |22.06.20 - 2|DP|[BOJ 13301 타일 장식물](https://www.acmicpc.net/problem/13301)|[BOJ 17404 RGB거리 2](https://www.acmicpc.net/problem/17404)|
+|22.06.28|-|[BOJ 3187 양치기 꿍](https://www.acmicpc.net/problem/3187)|[BOJ 13904 과제](https://www.acmicpc.net/problem/13904)|[BOJ 16928 뱀과 사다리 게임](https://www.acmicpc.net/problem/16928)|[BOJ 17070 파이프 옮기기1](https://www.acmicpc.net/problem/17070)|
+|22.07.05|-|[BOJ 1049 기타줄](https://www.acmicpc.net/problem/1049)|[BOJ 1388 바닥 장식](https://www.acmicpc.net/problem/1388)|[BOJ 9252 LCS 2](https://www.acmicpc.net/problem/9252)|[BOJ 17142 연구소3](https://www.acmicpc.net/problem/17142)|
