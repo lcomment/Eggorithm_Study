@@ -27,8 +27,6 @@ public class BOJ_14719 {
 			 for(int j=i+1 ; j<blocks.length ; j++)
 				 right = Math.max(blocks[j], right);
 			 
-			 System.out.println(left + " " + right);	 
-			 
 			 if(blocks[i] < left && blocks[i] < right) {
 				 if(left < right) {
 					 count += left - blocks[i];
