@@ -15,7 +15,7 @@
 
 ## 📚 Solved List
 |Day|Algorithm|Q1|Q2|Q3|Q4|
-|---|---------|--|--|--|--|
+|:---:|:---------:|:--:|:--:|:--:|:--:|
 |22.05.09|DFS & BFS|[BOJ 2638 치즈](https://www.acmicpc.net/problem/2638)|[BOJ 17471 게리맨더링](https://www.acmicpc.net/problem/17471)|
 |22.05.17|Backtracking|[BOJ 1987 알파벳](https://www.acmicpc.net/problem/1987)|[BOJ 6603 로또](https://www.acmicpc.net/problem/6603)|[BOJ 10971 외판원 순회2](https://www.acmicpc.net/problem/10971)|
 |22.05.23|Two Pointer|[BOJ 7795 먹을 것인가 먹힐 것인가](https://www.acmicpc.net/problem/7795)|[BOJ 2531 회전초밥](https://www.acmicpc.net/problem/2531)|[BOJ 10971 로봇 프로젝트](https://www.acmicpc.net/problem/3649)|
@@ -26,4 +26,4 @@
 |22.06.28|-|[BOJ 3187 양치기 꿍](https://www.acmicpc.net/problem/3187)|[BOJ 13904 과제](https://www.acmicpc.net/problem/13904)|[BOJ 16928 뱀과 사다리 게임](https://www.acmicpc.net/problem/16928)|[BOJ 17070 파이프 옮기기1](https://www.acmicpc.net/problem/17070)|
 |22.07.05|-|[BOJ 1049 기타줄](https://www.acmicpc.net/problem/1049)|[BOJ 1388 바닥 장식](https://www.acmicpc.net/problem/1388)|[BOJ 9252 LCS 2](https://www.acmicpc.net/problem/9252)|[BOJ 17142 연구소3](https://www.acmicpc.net/problem/17142)|
 |22.07.12|-|[BOJ 2252 줄 세우기](https://www.acmicpc.net/problem/2252)|[BOJ 2504 괄호의 값](https://www.acmicpc.net/problem/2504)|[BOJ 14888 연산자 끼워넣기](https://www.acmicpc.net/problem/14888)|[BOJ 16916 부분 문자열](https://www.acmicpc.net/problem/16916)|
-
+|22.08.02|-|[BOJ 1062 가르침](https://www.acmicpc.net/problem/1062)|[BOJ 1197 최소 스패닝 트리](https://www.acmicpc.net/problem/1197)|[BOJ 1916 최소비용 구하기](https://www.acmicpc.net/problem/1916)|[BOJ 14719 빗물](https://www.acmicpc.net/problem/14719)|
