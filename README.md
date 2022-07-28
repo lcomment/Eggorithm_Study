@@ -1,9 +1,9 @@
 # 🥚고리즘 스터디
 
 ## 🧑🏻‍💻 Member List
-|Nickname|[@kangsangsoo](https://github.com/kangsangsoo)|[@Yongshub](https://github.com/YongsHub)|[@khsexk](https://github.com/khsexk)|[@realhsb](https://github.com/realhsb)|
-|--------|-|-|-|-|
-|Language|C++|Python|Java|Java|
+|Nickname|[@kangsangsoo](https://github.com/kangsangsoo)|[@Yongshub](https://github.com/YongsHub)|[@khsexk](https://github.com/khsexk)|[@realhsb](https://github.com/realhsb)|[@himJJong](https://github.com/himJJong)|
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|Language|C++|Python|Java|Java|Java|
 
 
 ## 🗂 Directory Name
