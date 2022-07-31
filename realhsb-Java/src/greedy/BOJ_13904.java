@@ -74,5 +74,4 @@ class Assignment implements Comparable<Assignment>{
 			return o.score - this.score;	// 점수가 더 높은 순으로 
 		}
 	}
-	
 }
