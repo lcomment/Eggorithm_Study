@@ -41,6 +41,7 @@ public class BOJ_2812 {
 			stack.pop();
 			count++;
 		}
+		// 54
 	
 		for(int i = 0; i < stack.size(); i++) {
 			sb.append(stack.get(i));
@@ -48,3 +49,8 @@ public class BOJ_2812 {
 		System.out.println(sb.toString());
 	}
 }
+
+// 10 4
+// 4177252841
+
+// 775841

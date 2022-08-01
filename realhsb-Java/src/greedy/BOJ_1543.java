@@ -13,7 +13,7 @@ public class BOJ_1543 {
 		int i = 0; 
 		int answer = 0;
 		int count = 0;
-		
+		        
 		while(i < C.length - word.length + 1) {
 			if(C[i] == word[0]) {	// 첫 글자가 같을 경우 따라오는 글자들도 같은지 확인 
 				while(count < word.length && C[i+count] == word[count]) {
