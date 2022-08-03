@@ -58,11 +58,11 @@ def countReadableWords(data, learned):
 if k >= 5:
    learned = [0] * 123
    for x in first_word: # a n t i c 아는 단어로 처리
-      learned[ord(x)] = 1
+      learned[ord(x)] = 1 # 'a' -> ord(97) 
 
    # 남은 알파벳 중에서 k-5개를 선택해본다.
    for teach in list(combinations(remain_alphabet, k-5)):
-      for t in teach:
+      for t in teach: # x, b, y
          learned[ord(t)] = 1
       cnt = countReadableWords(data, learned)
 
