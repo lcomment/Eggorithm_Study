@@ -22,7 +22,7 @@ public class TypeInference {
 		visit[N] = 1;		
 		
 		while(!queue.isEmpty()) {
-			Point p = queue.poll();		//Point p인스턴스를 만든 후 하나씩 뽑아서
+			Point p = queue.poll();		
 			if(p.x==K) {
 				if(cnt == 0)
 					time = p.y;			//가장빠른 시간
