@@ -28,3 +28,4 @@
 |22.07.12|-|[BOJ 2252 줄 세우기](https://www.acmicpc.net/problem/2252)|[BOJ 2504 괄호의 값](https://www.acmicpc.net/problem/2504)|[BOJ 14888 연산자 끼워넣기](https://www.acmicpc.net/problem/14888)|[BOJ 16916 부분 문자열](https://www.acmicpc.net/problem/16916)|
 |22.08.02|-|[BOJ 1062 가르침](https://www.acmicpc.net/problem/1062)|[BOJ 1197 최소 스패닝 트리](https://www.acmicpc.net/problem/1197)|[BOJ 1916 최소비용 구하기](https://www.acmicpc.net/problem/1916)|[BOJ 14719 빗물](https://www.acmicpc.net/problem/14719)|
 |22.08.09|-|[BOJ 1038 감소하는 수](https://www.acmicpc.net/problem/1038)|[BOJ 2667 단지번호](https://www.acmicpc.net/problem/2667)|[BOJ 12851 숨바꼭질2](https://www.acmicpc.net/problem/12851)|[BOJ 13549 숨바꼭질3](https://www.acmicpc.net/problem/13549)|
+|22.08.16|-|[BOJ 1941 소문난 칠공주](https://www.acmicpc.net/problem/1941)|[BOJ 13913 숨바꼭질4](https://www.acmicpc.net/problem/13913)|[BOJ 14226 이모티콘](https://www.acmicpc.net/problem/14226)|[BOJ 17086 아기상어2](https://www.acmicpc.net/problem/17086)|
