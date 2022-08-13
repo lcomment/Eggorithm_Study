@@ -1,3 +1,4 @@
+#다시 풀어보기
 s, n = input().split()
 s = int(s)
 col, row = 2*s+3, s+2
