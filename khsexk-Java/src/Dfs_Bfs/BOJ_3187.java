@@ -80,12 +80,12 @@ public class BOJ_3187 {
 	}
 }
 
-//class Pair {
-//	int x;
-//	int y;
-//	
-//	Pair(int x, int y){
-//		this.x = x;
-//		this.y = y;
-//	}
-//}
+class Pair {
+	int x;
+	int y;
+	
+	Pair(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+}
