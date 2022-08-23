@@ -34,14 +34,10 @@ def bfs(visited, i, j):
 def swap():
     for i in range(6):
         for j in range(11, -1, -1):
-            check = False
             for k in range(j - 1, -1, -1):
                 if arr[k][i] != '.' and arr[j][i] == '.':
                     arr[j][i], arr[k][i] = arr[k][i], arr[j][i]
-                    check = True
                     break
-            if not check:
-                break
 
 
 while True:
