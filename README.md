@@ -30,3 +30,4 @@
 |22.08.09|-|[BOJ 1038 감소하는 수](https://www.acmicpc.net/problem/1038)|[BOJ 2667 단지번호](https://www.acmicpc.net/problem/2667)|[BOJ 12851 숨바꼭질2](https://www.acmicpc.net/problem/12851)|[BOJ 13549 숨바꼭질3](https://www.acmicpc.net/problem/13549)|
 |22.08.16|-|[BOJ 1941 소문난 칠공주](https://www.acmicpc.net/problem/1941)|[BOJ 13913 숨바꼭질4](https://www.acmicpc.net/problem/13913)|[BOJ 14226 이모티콘](https://www.acmicpc.net/problem/14226)|[BOJ 17086 아기상어2](https://www.acmicpc.net/problem/17086)|
 |22.08.23|-|[BOJ 1890 점프](https://www.acmicpc.net/problem/1890)|[BOJ 5557 1학년](https://www.acmicpc.net/problem/5557)|[BOJ 11559 Puyo Puyo](https://www.acmicpc.net/problem/11559)|[BOJ 15486 퇴사 2](https://www.acmicpc.net/problem/15486)|
+|22.08.23|-|[BOJ 1495 기타리스트](https://www.acmicpc.net/problem/1495)|[BOJ 2281 데스노트](https://www.acmicpc.net/problem/2281)|[BOJ 2933 미네랄](https://www.acmicpc.net/problem/2933)|[BOJ 15989 1, 2, 3 더하기 4](https://www.acmicpc.net/problem/15989)|
