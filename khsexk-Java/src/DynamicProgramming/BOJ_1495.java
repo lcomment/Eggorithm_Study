@@ -3,6 +3,7 @@ package DynamicProgramming;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BOJ_1495 {
@@ -29,14 +30,19 @@ public class BOJ_1495 {
 		}
 		
 		for(int i=1 ; i<N ; i++) {
+			ArrayList<Integer> arr = new ArrayList<>();
+			
 			for(int j=0 ; j<=M ; j++) {
 				if(v[j] != i-1) continue;
 				
 				if(0 <= j + P[i] && j + P[i] <= M)
-					v[j + P[i]] = i;
+					arr.add(j + P[i]);
 				if(0 <= j - P[i] && j - P[i] <= M)
-					v[j - P[i]] = i;
+					arr.add(j - P[i]);
 			} // for_j
+			
+			for(int idx : arr)
+				v[idx] = i;
 		} // for_i
 		
 		for(int i=M ; i>=0 ; i--) {
