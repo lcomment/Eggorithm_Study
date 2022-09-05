@@ -1,8 +1,7 @@
-package chapter2;
 import java.util.*;
 import java.io.*;
 
-public class TypeInference {
+public class Main {
 	static int count;
 	static long[] arr;
 	public static void main(String args[]) throws NumberFormatException, IOException{
@@ -26,9 +25,8 @@ public class TypeInference {
 			int end = count-1;
 			while(start < end) {
 				if(arr[start]+arr[end]==find) {
-					if(start!=i && end!=i) {
-						answer++;
-						break;
+					if(start==i && end==i) {
+						continue;
 					}
 					else if(start==i) {
 						start++;
@@ -36,7 +34,11 @@ public class TypeInference {
 					else if(end==i) {
 						end--;
 					}
-				}
+					else{
+                        			answer++;
+                        			break;
+                    				}
+					}
 				else if(arr[start]+arr[end]<find) {
 					start++;
 				}
