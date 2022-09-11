@@ -30,4 +30,5 @@ for _ in range(n):
         min_column = min(min_column, start_location[1])
         max_column = max(max_column, start_location[1])
     print((max_row - min_row) * (max_column - min_column))
+
     
