@@ -22,7 +22,7 @@ public class TypeInference {
         
         for(int i=1; i<=n; i++) {
         	for(int j=1; j<=n ;j++) {	
-        		
+        		if(i==n && j==n) continue;
         		if(i+array[i][j]<n+1) {		//행 사이즈  array[array[i-1][j]+1][j]
         			dp[i+array[i][j]][j]+=dp[i][j];
         		}
