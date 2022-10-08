@@ -20,7 +20,8 @@ def dfs(a, b, c):
     
     if a == 0 and b == 0 and c == 0:
         return 0
-    
+    if dp[a][b][c]!=-1:
+        return dp[a][b][c]
     dp[a][b][c] = int(10e9)
     for case in cases:
         dp[a][b][c] = min(dp[a][b][c], dfs(a - case[0], b - case[1], c - case[2]))
