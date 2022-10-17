@@ -4,7 +4,6 @@ input = sys.stdin.readline
 N, M = map(int, input().split())
 keywords = dict()
 answer = N
-answers = []
 for _ in range(N):
     keywords[input().rstrip()] = False
 
@@ -17,7 +16,4 @@ for _ in range(M):
                 keywords[post] = True
         except:
             continue
-    answers.append(answer)
-
-for answer in answers:
     print(answer)
