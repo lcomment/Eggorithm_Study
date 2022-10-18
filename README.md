@@ -35,4 +35,6 @@
 |22.09.18|-|[BOJ 2616 소형기관차](https://www.acmicpc.net/problem/2616)|[BOJ 10422 괄호](https://www.acmicpc.net/problem/10422)|[PG lv2 두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)|[PG lv3 등산코스 정하기](https://school.programmers.co.kr/learn/courses/30/lessons/118669)|
 |22.10.04|-|[BOJ 1806 부분합](https://www.acmicpc.net/problem/1806)|[BOJ 2023 신기한 소수](https://www.acmicpc.net/problem/2023)|[BOJ 3197 백조의 호수](https://www.acmicpc.net/problem/3197)|[BOJ 12869 뮤탈리스크](https://www.acmicpc.net/problem/12869)|
 |22.10.11|-|[BOJ 1194 달이 차오른다, 가자](https://www.acmicpc.net/problem/1194)|[BOJ 11049 행렬곱셈순서](https://www.acmicpc.net/problem/11049)|[BOJ 16197 두 동전](https://www.acmicpc.net/problem/16197)|
-|22.10.11|-|[BOJ 1205 등수 구하기](https://www.acmicpc.net/problem/1205)|[BOJ 1238 파티](https://www.acmicpc.net/problem/1238)|[BOJ 1244 스위치 켜고 끄기](https://www.acmicpc.net/problem/1244)|[BOJ 4485 녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)|
+|22.10.18|-|[BOJ 1205 등수 구하기](https://www.acmicpc.net/problem/1205)|[BOJ 1238 파티](https://www.acmicpc.net/problem/1238)|[BOJ 1244 스위치 켜고 끄기](https://www.acmicpc.net/problem/1244)|[BOJ 4485 녹색 옷 입은 애가 젤다지?](https://www.acmicpc.net/problem/4485)|
+|22.10.25|-|[BOJ 3758 KCPC](https://www.acmicpc.net/problem/3758)|[BOJ 12919 A와 B 2](https://www.acmicpc.net/problem/12919)|[BOJ 14659 하늘에서 별똥별이 빗발친다
+](https://www.acmicpc.net/problem/14659)|[BOJ 20310 타노스](https://www.acmicpc.net/problem/20310)|
