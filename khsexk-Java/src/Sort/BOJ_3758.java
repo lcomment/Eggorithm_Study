@@ -1,3 +1,5 @@
+package Sort;
+
 import java.io.*;
 import java.util.*;
 
@@ -17,11 +19,10 @@ public class BOJ_3758 {
             id = problem[2];
             m = problem[3];
 
-            int score[][] = new int[n+1][k+1];  // 팀별 문제별 점수
-            int cnt[] = new int[n+1];           // 팀별 제출 횟수
-            int time[] = new int[n+1];          // 팀별 마지막 제출 시간
+            int score[][] = new int[n+1][k+1]; 
+            int cnt[] = new int[n+1];          
+            int time[] = new int[n+1];         
 
-            // m개의 로그 읽어서 저장
             int index = 0;
             while(m --> 0) {
                 input = br.readLine();
