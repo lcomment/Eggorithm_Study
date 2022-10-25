@@ -2,6 +2,51 @@
 //문제 : 1) 넓이의 값으로 해당 좌표를 알 수 없다 2) 탐색하기에 범위가 너무 넓다. 
 //2차 접근 - 별 위치를 중심으로 모서리 끝 4가지 방향 + 중간 지점으로 4방향 + 별을 중심으로 1가지 9가지로 탐색
 //문제 : 별이 많이 존재하는 위치가 특정 부분에 몰릴 수 있다.
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+	static List <int[]> stars;
+	static int L;
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		int N = Integer.parseInt(st.nextToken());
+		int M = Integer.parseInt(st.nextToken());
+		L = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
+		
+		stars = new ArrayList<>();
+		
+		for(int i=0; i<K ; i++) {
+			st = new StringTokenizer(br.readLine());
+			int x = Integer.parseInt(st.nextToken());
+			int y = Integer.parseInt(st.nextToken());
+			stars.add(new int[] {x,y});
+			}
+		int res = Integer.MIN_VALUE;
+		for(int[] s1: stars) {
+			for(int[] s2: stars) {
+				res=Math.max(res, boundStar(s1[0],s2[1]));
+			}
+		}
+		System.out.println(K-res);
+	}
+	private static int boundStar(int i, int j) {
+		int res = 0;
+		for(int[] s:stars) {
+			if(i<=s[0]&&s[0]<=i+L && j<=s[1]&&s[1]<=j+L ) res++;
+		}
+		return res;
+	}
+}
+
+
+
+
+//////////////////////////////////////////////////////////////////
 import java.io.*;
 import java.util.*;
 
