@@ -12,8 +12,9 @@ public class BOJ_1138 {
 		
 		int N = Integer.parseInt(br.readLine());
 		int[] input = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-		int[] seq = new int[N]; 
+		int[] seq = new int[N];  // 키를 저장할 테이블 
 		
+		// 키 리셋 
 		Arrays.fill(seq, Integer.MAX_VALUE);
 		
 		for(int i=0 ; i<N ; i++) {
@@ -21,7 +22,8 @@ public class BOJ_1138 {
 			int height = i+1;
 			
 			for(int j=0 ; j<N ; j++) {
-				if(input[i] <= cnt && seq[j] == Integer.MAX_VALUE) {
+				// 지금까지의 카운트가 나보다 큰 사람의 수와 같을 때 
+				if(input[i] == cnt && seq[j] == Integer.MAX_VALUE) {
 					seq[j] = height;
 					break;
 				}
