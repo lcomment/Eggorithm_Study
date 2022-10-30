@@ -22,11 +22,6 @@ public class BOJ_11057 {
 				}
 			}
 		}
-		for(int i=0 ; i<=N ; i++) {
-			for(int j=0 ; j<10 ; j++)
-				System.out.print(dp[i][j] + "\t");
-			System.out.println();
-		}
 		
 		int result = 0;
 		for(int i=0 ; i<10 ; i++) {
