@@ -17,6 +17,7 @@ public class BOJ_20437 {
 			String W = br.readLine();
 			int K = Integer.parseInt(br.readLine());
 			
+			// 리턴한 ArrayList가 비어있으면 -1, 그렇지 않으면 맨 앞과 맨 뒤 요소를 출력 
 			ArrayList<Integer> result = searchString(W, K);
 			
 			if(result == null)
@@ -33,10 +34,12 @@ public class BOJ_20437 {
 		ArrayList<Integer> arr = new ArrayList<>();
 		int[] alphabet = new int[26];
 		
+		// 완전탐색을 했는데 시간초과가 나서 조건 추가
 		for(int i = 0; i < str.length(); i++) {
 			alphabet[str.charAt(i) - 'a']++;
 		}
 		
+		// 문자열의 해당 알파벳의 개수가 K개 이하면 탐색하지 않음  
 		for(int i=0 ; i<str.length() ; i++) {
 			if(alphabet[str.charAt(i) - 'a'] < k) continue;
 			
