@@ -35,15 +35,17 @@ def getMaxLocation(likeFriends, i, j):
 
 
 def getLocation(likeFriends):
-    max_cnt = 0
-    locations = [(0, 0)]
+    max_cnt = -1
+    locations = []
     
     for i in range(len(graph)):
         for j in range(len(graph)):
             if graph[i][j]:
                 continue
             max_value = getMaxLocation(likeFriends, i, j)
-            if max_value > max_cnt:
+            if max_value == 0:
+                continue
+            elif max_value > max_cnt:
                 locations = [(i, j)]
                 max_cnt = max_value
             elif max_value == max_cnt:
@@ -54,7 +56,7 @@ def getLocation(likeFriends):
 def getMaxEmptyBlanksLocation(locations):
     global N
     max_cnt = 0
-    max_x, max_y = -1, -1
+    max_x, max_y = 0, 0
     for (x, y) in locations:
         cnt = 0
         for i in range(4):
@@ -66,6 +68,8 @@ def getMaxEmptyBlanksLocation(locations):
         if cnt > max_cnt:
             max_x, max_y = x, y
             max_cnt = cnt
+    if max_cnt == 0:
+        max_x, max_y = locations[0]
     return max_x, max_y
 
 
@@ -88,16 +92,16 @@ for _ in range(N ** 2):
         if len(locations) > 1: # 조건 1을 만족하는 칸이 여러개라면 비어있는 칸이 가장 많은 칸
             x, y = getMaxEmptyBlanksLocation(locations)
             graph[x][y] = number
+        elif len(locations) == 0: # 좋아하는 친구가 그래프에 존재하지만 인접한 공간에 모두 자리가 없을 때
+            x, y = getMaxEmptyBlanksLocation(makeGraphTuple(graph))
+            graph[x][y] = number
         else:
             graph[locations[0][0]][locations[0][1]] = number
-        visited[number] = True
     else:
         #그래프가 비어있을 때
         x, y = getMaxEmptyBlanksLocation(makeGraphTuple(graph))
-        if x != -1 and y != -1:
-            graph[x][y] = number
-            visited[number] = True
-print(graph)
+        graph[x][y] = number
+    visited[number] = True
 
 for i in range(N):
     for j in range(N):
