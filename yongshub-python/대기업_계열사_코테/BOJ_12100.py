@@ -84,7 +84,8 @@ def dfs(board, cnt):
         return
 
     for i in range(4):
-        tmp_board = move(board[:][:], i)
+        new_board = [item[:] for item in board]
+        tmp_board = move(new_board, i)
         dfs(tmp_board, cnt + 1)
 
 ans = 0
