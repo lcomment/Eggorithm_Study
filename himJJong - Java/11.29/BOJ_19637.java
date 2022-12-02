@@ -1,19 +1,14 @@
 import java.io.*;
 import java.util.*;
 
-
 public class BOJ_19637 {
-    static int N;
-    static int M;
-    static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        List<String> answer = new ArrayList<>();
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        N = Integer.parseInt(st.nextToken());
-        M = Integer.parseInt(st.nextToken());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
         String[] gradeName = new String[N];
         int[] gradeNum = new int[N];
