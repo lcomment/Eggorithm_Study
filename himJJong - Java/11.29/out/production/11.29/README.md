@@ -21,12 +21,3 @@ bw.flush();
 *입력 뿐 아니라 출력이 많을 때도 시간이 오래 걸린다는 점에서 BufferWriter도 사용할 줄 알아야했다.
 ```
 
-```
-추가로 
-
-Arrays.sort : 퀵 정렬 / 최악일 경우 O(n^2) 이지만,
-Collections.sort() : Timsort - Timsort란 삽입 정렬과 합병정렬을 결합하여 만든 정렬 / 최악일 경우 O(nlog(n)) 
-
-시간 복잡도가 다른것은 알고 있었지만 조금 자세하게 나와있어 자바를 공부하는 친구들을 위해 넣어놓았다. 궁금하면 아래 링크로 가서 읽어봐도 재밌을거다.
-https://laugh4mile.tistory.com/175
-```
