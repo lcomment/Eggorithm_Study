@@ -27,18 +27,15 @@ def validateEqualRanks(original, compare):
 
 
 for i in range(N):
-    try:
-        if nation_medals[i][0] == K:
-            print(ranks)
-            break
-        elif validateEqualRanks(nation_medals[i], nation_medals[i + 1]): #현재 국가와 다음 국가의 금,은,동이 같다면
-            cnt += 1
-            continue
+    if nation_medals[i][0] == K:
+        print(ranks)
+        break
+    elif validateEqualRanks(nation_medals[i], nation_medals[i + 1]): #현재 국가와 다음 국가의 금,은,동이 같다면
+        cnt += 1
+        continue
+    else:
+        if cnt > 0:
+            ranks += cnt
+            cnt = 1
         else:
-            if cnt > 0:
-                ranks += cnt
-                cnt = 1
-            else:
-                ranks += 1
-    except:
-        pass
+            ranks += 1
