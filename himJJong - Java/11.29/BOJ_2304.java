@@ -24,13 +24,14 @@ public class BOJ_2304 {
             int j = i+1;
             int max = j;
 
-            //while j 값이 전체 count보다 작으면서 현재 기둥 높이가 j기둥 높이보다 크다면 실행
-            //만약 max기둥 높이가 다다음 기둥 높이보다 작다면 max값을 j-1로 수정
+            //while문 - 다음 기둥 값이 범위내에 있으면서 현재 기둥 높이가 다음 기둥 높이보다 클 때
+            //만약 max기둥 높이가 다다음 기둥 높이보다 작다면 max값을 다음으로 큰 j-1로 수정
+
             while(j<count && data[i][1]>data[j][1]){
                 if(data[max][1]<data[j++][1]) max = j - 1;
             }
 
-            if(j>=count) {  // j가 N보다 크거나 같다면 i번째 기둥보다 큰 기둥이 없는 경우
+            if(j>=count) {  // j가 N보다 크거나 같다면 i번째 기둥보다 큰 기둥이 없는 경우 + 맨 마지막 남은 기둥 값 추가
                 area += data[i][1];
                 if(max < count) area += data[max][1] * (data[max][0] - data[i][0]-1);
                 i = max;
