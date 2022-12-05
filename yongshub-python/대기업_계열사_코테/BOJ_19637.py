@@ -37,7 +37,3 @@ for value in ascend_style:
 
 for power in combat_power:
     print(orders[power])
-
-
-    
-
