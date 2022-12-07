@@ -23,31 +23,38 @@
 # 1
 # 1
 import sys
-from itertools import combinations
+sys.setrecursionlimit(10 ** 6)
 
 input = sys.stdin.readline
+
+def topDown(half_money):
+    if half_money <= 0:
+        return
+    
+    for idx, value in enumerate(coins):
+        if dp[0] is True:
+            return
+        elif 0 <= half_money - value <= 50000 and not visited[idx]:
+            dp[half_money - value] = True
+            visited[idx] = True
+            topDown(half_money - value)
+            visited[idx] = False
+
 
 for _ in range(3):
     N = int(input().rstrip())
     coins = []
+    dp = [False] * 500001
     for _ in range(N):
         money, cnt = map(int, input().split())
         coins.extend([money] * cnt)
     
+    visited = [False] * len(coins)
     total_money = sum(coins)
     half_money = total_money // 2
-
-    for i in range(1, N):
-        check = False
-        for comb in combinations(coins, i):
-            if sum(comb) == half_money:
-                check = True
-                break
-        if check:
-            print(1)
-            break
-        else:
-            print(0)
-            break
+    topDown(half_money)
+    if dp[0] is True:
+        print(1)
+    else:
+        print(0)
     
-
