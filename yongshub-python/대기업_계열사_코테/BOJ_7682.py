@@ -58,15 +58,24 @@ for line in graph:
     nodes = []
     x_count, o_count = 0, 0 # 'X'개수, 'O' 개수
     for i in range(0, 9, 3):
+<<<<<<< HEAD
         row = line[i:i + 3] # ex) OXOXOXXXO OXO, XOX, XXO 3개씩 자르기 
+=======
+        row = line[i:i + 3]
+>>>>>>> 13a39bfb5b0f981c03c9524d2901e9b83b7b5c13
         x_count += row.count('X')
         o_count += row.count('O')
         nodes.append(list(row))
 
     check_O = checkInRowCircle() # 'O'연속 여부 체크
 
+<<<<<<< HEAD
     if check_O: # O가 연속되었다면 
         if x_count == o_count: # O와X개수는 무조건 같아야함
+=======
+    if check_O:
+        if x_count == o_count:
+>>>>>>> 13a39bfb5b0f981c03c9524d2901e9b83b7b5c13
             print('valid')
         else:
             print('invalid')
@@ -74,8 +83,13 @@ for line in graph:
 
     check_X = checkInRowX() # 'X' 연속 여부 체크
 
+<<<<<<< HEAD
     if check_X: # 'X'가 연속되었다면
         if x_count - 1 == o_count: # 'X'개수는 무조건 O보다 1개 많아야함
+=======
+    if check_X:
+        if x_count - 1 == o_count:
+>>>>>>> 13a39bfb5b0f981c03c9524d2901e9b83b7b5c13
             print('valid')
         else:
             print('invalid')
