@@ -1,93 +1,90 @@
 import sys
 
 input = sys.stdin.readline
-n = int(input().rstrip())
 
-graph = []
-for i in range(n):
-    graph.append(list(map(int, input().split())))
-
-def move(board, dir):
-    if dir == 0:  # 동쪽
-        for i in range(n):
-            top = n - 1
-            for j in range(n - 2, -1, -1):
-                if board[i][j]:
-                    tmp = board[i][j]
-                    board[i][j] = 0
-                    if board[i][top] == 0:
-                        board[i][top] = tmp
-                    elif board[i][top] == tmp:
-                        board[i][top] = tmp * 2
+N = int(input().rstrip())
+graph = [list(map(int, input().split())) for _ in range(N)]
+answer = 0
+def move(graph, direction):
+    global N
+    if direction == 0: #동쪽
+        for i in range(N):
+            top = N - 1
+            for j in range(N - 2, -1, -1):
+                if graph[i][j]:
+                    value = graph[i][j]
+                    graph[i][j] = 0
+                    if graph[i][top] == value:
+                        graph[i][top] = value * 2
                         top -= 1
+                    elif graph[i][top] == 0:
+                        graph[i][top] = value
                     else:
                         top -= 1
-                        board[i][top] = tmp
-
-    elif dir == 1:  # 서쪽
-        for i in range(n):
+                        graph[i][top] = value
+    elif direction == 1: #서쪽
+        for i in range(N):
             top = 0
-            for j in range(1, n):
-                if board[i][j]:
-                    tmp = board[i][j]
-                    board[i][j] = 0
-                    if board[i][top] == 0:
-                        board[i][top] = tmp
-                    elif board[i][top] == tmp:
-                        board[i][top] = tmp * 2
+            for j in range(1, N):
+                if graph[i][j]:
+                    value = graph[i][j]
+                    graph[i][j] = 0
+                    if graph[i][top] == value:
+                        graph[i][top] = value * 2
                         top += 1
+                    elif graph[i][top] == 0:
+                        graph[i][top] = value
                     else:
                         top += 1
-                        board[i][top] = tmp
-
-    elif dir == 2:  # 남쪽
-        for j in range(n):
-            top = n - 1
-            for i in range(n - 2, -1, -1):
-                if board[i][j]:
-                    tmp = board[i][j]
-                    board[i][j] = 0
-                    if board[top][j] == 0:
-                        board[top][j] = tmp
-                    elif board[top][j] == tmp:
-                        board[top][j] = tmp * 2
+                        graph[i][top] = value
+    elif direction == 2: #남쪽
+        for i in range(N):
+            top = N - 1
+            for j in range(N - 2, -1 , -1):
+                if graph[j][i]:
+                    value = graph[j][i]
+                    graph[j][i] = 0
+                    if graph[top][i] == value:
+                        graph[top][i] = value * 2
                         top -= 1
+                    elif graph[top][i] == 0:
+                        graph[top][i] = value
                     else:
                         top -= 1
-                        board[top][j] = tmp
-
-    else:
-        for j in range(n):
+                        graph[top][i] = value
+    else:#북쪽
+        for i in range(N):
             top = 0
-            for i in range(1, n):
-                if board[i][j]:
-                    tmp = board[i][j]
-                    board[i][j] = 0
-                    if board[top][j] == 0:
-                        board[top][j] = tmp
-                    elif board[top][j] == tmp:
-                        board[top][j] = tmp * 2
+            for j in range(1, N):
+                if graph[j][i]:
+                    value = graph[j][i]
+                    graph[j][i] = 0
+                    if graph[top][i] == value:
+                        graph[top][i] = value * 2
                         top += 1
+                    elif graph[top][i] == 0:
+                        graph[top][i] = value
                     else:
                         top += 1
-                        board[top][j] = tmp
+                        graph[top][i] = value
+    return graph
 
-    return board
-
-
-def dfs(board, cnt):
-    global ans
+def dfs(graph, cnt):
+    global answer
     if cnt == 5:
-        for i in range(n):
-            for j in range(n):
-                ans = max(ans, board[i][j])
+        for i in range(N):
+            for j in range(N):
+                answer = max(answer, graph[i][j])
         return
-
+    
+    #동,서,남,북 이동하는 경우를 다 따져야함.
     for i in range(4):
-        new_board = [item[:] for item in board]
-        tmp_board = move(new_board, i)
-        dfs(tmp_board, cnt + 1)
+        new_graph = [temp[:] for temp in graph]
+        result = move(new_graph, i)
+        dfs(result, cnt + 1)
 
-ans = 0
+
 dfs(graph, 0)
-print(ans)
+print(answer)
+
+
