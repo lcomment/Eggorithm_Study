@@ -1,4 +1,4 @@
-package DynamicProgramming;
+package BOJ.DynamicProgramming;
 
 import java.io.BufferedReader;
 import java.io.IOException;
