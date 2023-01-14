@@ -24,6 +24,7 @@ public class BOJ_24416 {
         }
         return fib(n - 1) + fib(n - 2);
     }
+
     public static int fibonacci(int n) {
         memo[0] = 1;
         memo[1] = 1;
