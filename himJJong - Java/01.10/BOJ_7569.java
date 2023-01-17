@@ -36,7 +36,7 @@ public class BOJ_7569 {
                     tomato[i][j][k] = sc.nextInt();
                     if (tomato[i][j][k] == 0)               // 안익은 토마토
                         greenTomato++;
-                    else if (tomato[i][j][k] == 1)          // 익은 토마토
+                    if (tomato[i][j][k] == 1)          // 익은 토마토
                         redTomato.add(new Location(i, j, k));
                 }
             }
