@@ -1,0 +1,42 @@
+package BOJ.DynamicProgramming;
+
+import java.io.*;
+import java.util.Arrays;
+
+public class BOJ_11052 {
+    static int N;
+    static int[] p, dp;
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        N = sToI(br.readLine());
+        p = sToIntArray("0 " + br.readLine());
+        dp = new int[N + 1];
+
+        dp[1] = p[1];
+
+        for(int i=2 ; i<=N ; i++) {
+            dp[i] = p[i];
+
+            for(int j=i-1 ; j>=1 ; j--) {
+                dp[i] = Math.max(dp[i], dp[j] + dp[i-j]);
+            }
+        }
+
+        bw.write(String.valueOf(dp[N]));
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+
+    private static int sToI(String s) {
+        return Integer.parseInt(s);
+    }
+    private static int[] sToIntArray(String s) {
+        return Arrays.stream(s.split(" "))
+                .mapToInt(Integer::parseInt)
+                .toArray();
+    }
+}
