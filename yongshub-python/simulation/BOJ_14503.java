@@ -29,7 +29,7 @@ public class BOJ_14503 {
                 graph[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        System.out.println(bfs(startX, startY, direction));
+        System.out.println(bfs());
 
     }
 
@@ -39,7 +39,7 @@ public class BOJ_14503 {
                 .toArray();
     }
 
-    public static int bfs(int startX, int startY, int direction) {
+    public static int bfs() {
         int answer = 1;
         visited[startX][startY] = true;
         Deque<Integer> queue = new LinkedList<>(List.of(startX, startY));
