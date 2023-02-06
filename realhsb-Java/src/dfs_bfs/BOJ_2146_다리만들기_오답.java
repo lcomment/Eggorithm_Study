@@ -9,7 +9,7 @@ import java.util.Queue;
 import java.util.stream.*;
 import java.util.LinkedList;
 
-public class BOJ_2146_다리만들기 {
+public class BOJ_2146_다리만들기_오답 {
 	static int N, line;
 	static int min = Integer.MAX_VALUE;
 	static int[] dx = {0, 1, 0, -1};
