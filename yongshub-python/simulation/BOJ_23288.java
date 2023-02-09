@@ -33,7 +33,7 @@ public class BOJ_23288 {
         System.out.println(move(0, 0));
     }
 
-    public static void initializeMap() {
+    public static void initializeMap() { // 시계, 반시계, 반대 방향에 따른 방향 값 초기화
         //동쪽
         HashMap<String, Integer> direct = new HashMap<>();
         direct.put("시계", 2);
@@ -66,7 +66,7 @@ public class BOJ_23288 {
                 .toArray();
     }
 
-    public static void initializeQueue() {
+    public static void initializeQueue() { // 초기 큐 상태 초기화
         queue1.addAll(List.of(1, 5, 6, 2));
         queue2.addAll(List.of(1, 3, 6, 4));
     }
@@ -95,7 +95,7 @@ public class BOJ_23288 {
         return totalScore;
     }
 
-    public static int bfs(int number) {
+    public static int bfs(int number) { // 동서남북으로 움직일 수 있는 방향 체크
         boolean[][] visited = new boolean[N][M];
         int[] dx = {0, 0, 1, -1};
         int[] dy = {1, -1, 0, 0};
@@ -125,7 +125,7 @@ public class BOJ_23288 {
         return cnt * graph[curX][curY];
     }
 
-    public static void decisionDirect(int direct) {
+    public static void decisionDirect(int direct) { // 주사위의 값과 지도 의 값과의 비교
         if(queue1.get(2) > graph[curX][curY]) {
             currDirect = directions.get(direct).get("시계");
         }else if(queue1.get(2) < graph[curX][curY]) {
@@ -133,7 +133,7 @@ public class BOJ_23288 {
         }
     }
 
-    public static boolean canNotMove(int currDirect) {
+    public static boolean canNotMove(int currDirect) { // 움직일 수 있는지 없는지 체크
         // 0 : 동쪽, 1: 서쪽, 2: 남쪽, 3: 북쪽
         int nx = curX;
         int ny = curY;
