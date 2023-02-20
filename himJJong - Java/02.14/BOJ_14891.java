@@ -44,19 +44,22 @@ public class BOJ_14891 {
     }
 
     private static void leftSpin(int index, int dir) {
-        if(index < 0) return;
-        if(data[index][2]==data[index+1][6]) return;
+        if(index < 0) return;   // 왼쪽 톱니바퀴가 없다면
+        if(data[index][2]==data[index+1][6]) return;    // 왼쪽 기준 [2] == 오른쪽 기준 [6]
         leftSpin(index-1, -dir);
         changeWheel(index,dir);
     }
 
     private static void rightSpin(int index, int dir) {
-        if(index > 3) return;
-        if(data[index][6]==data[index-1][2]) return;
+        if(index > 3) return;   // 오른쪽 톱니바퀴가 없다면
+        if(data[index][6]==data[index-1][2]) return;    // 오른쪽 기준 [6] == 왼쪽 기준 [2]
         rightSpin(index+1, -dir);
         changeWheel(index,dir);
     }
-    private static void changeWheel(int index, int dir) {  // 움직인 톱니바퀴 배열 값 정정
+
+    // 움직인 톱니바퀴 배열 값 정정
+    // 큐에 담아서 자동으로 인덱스 설정이 되게 할까 고민하다, 톱니바퀴 내 사이즈가 7 뿐이기에 배열로 진행
+    private static void changeWheel(int index, int dir) {
         if(dir==1) {
             int tmp = data[index][7];
             for(int i=7; i>0; i--) {
