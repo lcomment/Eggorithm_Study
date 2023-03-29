@@ -29,6 +29,9 @@ public class BOJ_1946 {
                 }
             });
 
+            // Arrays.sort(data, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o1[0] - o2[0]);
+            // 2차원 배열 람다식 활용하기
+
             int init = data[0][1];
             for(int j=1; j<data.length;j++){
                 if(data[j][1] < init) {
@@ -38,6 +41,7 @@ public class BOJ_1946 {
             }
             sb.append(answer+1).append("\n");
         }
-        System.out.print(sb);
+
+        System.out.println(sb);
     }
 }
