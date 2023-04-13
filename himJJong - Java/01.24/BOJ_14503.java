@@ -11,7 +11,7 @@ public class BOJ_14503 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-
+        StringBuilder sb= new StringBuilder();
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         data =  new int[N][M];
