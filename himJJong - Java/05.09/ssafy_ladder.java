@@ -1,62 +1,50 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.*;
+import java.io.*;
 
-public class ssafy_ladder {
+class ssafy_ladder {
+    static int[] dx = { 0, 0, -1 };
+    static int[] dy = { -1, 1, 0 };
 
-    static int [][] map;
-    static int N=100, arriveX, arriveY, answer;
-
-    static int [] dx = {0,0,-1};
-    static int [] dy = {-1,1,0};
-
-    public static void main(String[] args) throws NumberFormatException, IOException {
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = 10;
         StringBuilder sb = new StringBuilder();
-        StringTokenizer st;
 
-        for(int tc=0;tc<10;tc++) {
-            int t = Integer.parseInt(br.readLine());
+        for (int test_case = 1; test_case <= T; test_case++) {
+            int[][] ladder = new int[100][100];
+            int x = 0;
+            int y = 0;
 
-            map = new int[N][N];
-            for(int i=0;i<N;i++) {
-                st = new StringTokenizer(br.readLine());
-                for(int j=0;j<N;j++) {
-                    map[i][j] = Integer.parseInt(st.nextToken());
-                    if(map[i][j]==2) {
-                        arriveX = i;
-                        arriveY = j;
+            int test = Integer.parseInt(br.readLine());
+
+            for (int i = 0; i < ladder.length; i++) {
+                String s = br.readLine();
+                StringTokenizer st = new StringTokenizer(s, " ");
+                for (int j = 0; j < ladder.length; j++) {
+                    ladder[i][j] = Integer.parseInt(st.nextToken());
+                    if (ladder[i][j] == 2) {
+                        x = i;
+                        y = j;
                     }
                 }
             }
-            move(arriveX, arriveY);
-            sb.append("#"+t+" "+answer+"\n");
-        }
-        System.out.println(sb.toString());
 
-    }
+            while (x != 0) {
+                for (int i = 0; i < dx.length; i++) {
+                    int nx = x + dx[i];
+                    int ny = y + dy[i];
 
-    public static void move(int x, int y) {
-
-        while(true) {
-            if(x==0) {
-                answer = y;
-                break;
-            }
-            for(int i=0;i<3;i++) {
-                int nx = x+dx[i];
-                int ny = y+dy[i];
-
-                if(range(nx,ny) && map[nx][ny]==1) {
-                    map[x][y] = 3;
-                    x = nx; y=ny;
+                    if (nx >= 0 && nx < ladder.length && ny >= 0 && ny < ladder.length) {
+                        if (ladder[nx][ny] == 1) {
+                            x = nx;
+                            y = ny;
+                            ladder[x - dx[i]][y - dy[i]] = 3;
+                        }
+                    }
                 }
             }
+            sb.append("#").append(test).append(" ").append(y).append("\n");
         }
-    }
-
-    public static boolean range(int x, int y) {
-        return x>=0 && x<N && y>=0 && y<N;
+        System.out.println(sb);
     }
 }
