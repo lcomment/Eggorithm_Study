@@ -10,11 +10,6 @@ public class BOJ_5639 {
         Node(int num) {
             this.num = num;
         }
-        Node(int num, Node left, Node right){
-            this.num = num;
-            this.left = left;
-            this.right = right;
-        }
         void insert(int n){
             if(n < this.num){
                 if(this.left == null)   this.left = new Node(n);
@@ -33,7 +28,7 @@ public class BOJ_5639 {
         String input;
         while(true){
             input = br.readLine();
-            if(input == null || input.equals(""))
+            if(input == null)
                 break;
             root.insert(Integer.parseInt(input));
         }
