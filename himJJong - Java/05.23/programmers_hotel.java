@@ -43,7 +43,7 @@ public class programmers_hotel {
             for(int j=0; j<list.size(); j++) {
                 int end = list.get(j).peek().end + 10;
                 if(end % 100>= 60){
-                    end += 40;
+                    end += 100+(end%100)&60;
                 }
                 if (tmp.start >= end) {
                     list.get(j).add(tmp);
