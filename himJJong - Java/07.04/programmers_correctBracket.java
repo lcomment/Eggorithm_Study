@@ -8,11 +8,11 @@ public class programmers_correctBracket {
         for(int i=0; i<s.length(); i++){
             if(s.charAt(i) == '(')  st.push('(');
             else if(s.charAt(i) == ')'){
-                if(st.isEmpty())    return false;
+                if(st.isEmpty()) System.out.println("false");
                 st.pop();
             }
         }
-        if(!st.isEmpty())   return false;
-        return true;
+        if(!st.isEmpty()) System.out.println("false");
+        System.out.println("true");
     }
 }
