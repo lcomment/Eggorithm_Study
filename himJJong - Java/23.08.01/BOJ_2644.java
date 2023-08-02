@@ -39,7 +39,8 @@ public class BOJ_2644 {
         for (int i : list.get(pos)) {
             if (!visited[i]) {
                 if (i == find) {
-                    answer = cnt + 1;
+                    System.out.println(cnt+1);
+                    System.exit(0);
                 }
                 dfs(i, find, cnt + 1);
             }
