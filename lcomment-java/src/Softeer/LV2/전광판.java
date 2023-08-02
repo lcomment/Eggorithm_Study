@@ -76,4 +76,3 @@ public class 전광판 {
     return cnt;
   }
 }
-}
