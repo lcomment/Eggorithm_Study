@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.math.BigInteger;
+import java.util.Collections;
 
 public class BOJ_2870{
     public static void main(String[] args) throws Exception {
@@ -20,7 +21,7 @@ public class BOJ_2870{
                 }
             }
         }
-        paper.sort(null);
+        Collections.sort(paper);
 
         for(i=0;i<paper.size();i++) {
             res.append(paper.get(i)).append("\n");
