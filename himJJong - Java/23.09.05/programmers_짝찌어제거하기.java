@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution{
+class programmes_짝지어제거하기{
     public int solution(String s){
         Stack<String> st = new Stack<>();
         String[] tmp = s.split("");
