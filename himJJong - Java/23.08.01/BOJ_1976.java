@@ -24,6 +24,7 @@ public class BOJ_1976{
                 if(a==1)    union(i,j);
             }
         }
+        
 
         st = new StringTokenizer(br.readLine());
 
