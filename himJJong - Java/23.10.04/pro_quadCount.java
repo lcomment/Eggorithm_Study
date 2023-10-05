@@ -32,7 +32,6 @@ class pro_quadCount {
     }
 
     private static boolean numberCheck(int row, int col, int size, int[][] arr){
-        int tmp = arr[row][col];
         int zeroData = 0;
         int oneData = 0;
 
