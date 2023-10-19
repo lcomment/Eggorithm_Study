@@ -5,6 +5,7 @@ import java.io.InputStreamReader;
 public class BOJ_11404 {
     public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         int N = Integer.parseInt(br.readLine());
         int M = Integer.parseInt(br.readLine());
@@ -41,11 +42,13 @@ public class BOJ_11404 {
         }
 
         for(int i=1; i<=N; i++){
-            for(int j=1 ; j<=N; j++){
-                if(dist[i][j] == 987654321) System.out.print(0+" ");
-                System.out.print(dist[i][j]+" ");
+            for(int j=1; j<=N; j++){
+                if(dist[i][j] == 987654321) sb.append(0).append(" ");
+                else    sb.append(dist[i][j]).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
+
+        System.out.println(sb.toString());
     }
 }
