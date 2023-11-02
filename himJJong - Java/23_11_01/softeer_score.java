@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class softeer_score_level3 {
+public class softeer_score {
 
     public static void main(String[] args)throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
