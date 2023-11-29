@@ -2,11 +2,10 @@ import java.util.*;
 
 class pro_diskController {
     public static void main(String[] args) {
-        int[][] jobs = {{4, 7}, {1, 9}, {0, 3}, {2, 6},};
+        int[][] jobs = {{4, 7}, {1, 9}, {0, 3}, {2, 6},{4,6}};
         System.out.println(solution(jobs));
     }
     static public int solution(int[][] jobs) {
-        int answer = 0;
         Arrays.sort(jobs, (a,b) -> a[0] - b[0]);
         PriorityQueue<int[]> q = new PriorityQueue<>((o1, o2) -> o1[1] - o2[1]);
 
