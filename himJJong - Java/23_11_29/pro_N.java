@@ -17,16 +17,19 @@ class pro_N {
 
         dp.get(1).add(N);
 
-        for (int i = 2; i <= 8; i++) {
+        for (int i = 2; i <= 8; i++) {  // N의 개수 i개 일때
             StringBuilder sb = new StringBuilder().append(N);
+
             for (int j = 1; j < i; j++) {
                 sb.append(N);
             }
+
             dp.get(i).add(Integer.parseInt(sb.toString()));
+
             for (int j = 1; j < i; j++) {
-                int k = i - j;
-                for (int num1 : dp.get(j)) {
-                    for (int num2 : dp.get(k)) {
+                int k = i - j;                      // i가 3 이라면
+                for (int num1 : dp.get(j)) {        // sb = "555" , k = 3 - 1 = 2;
+                    for (int num2 : dp.get(k)) {    //              k = 3 - 2 = 1;
                         dp.get(i).add(num1 + num2);
                         dp.get(i).add(num1 - num2);
                         dp.get(i).add(num1 * num2);
@@ -36,6 +39,7 @@ class pro_N {
                     }
                 }
             }
+
             if (dp.get(i).contains(number)) {
                 return i;
             }
