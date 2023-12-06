@@ -4,7 +4,8 @@ class pro_연속부분수열 {
     HashSet<Integer> set = new HashSet<>();
     public int solution(int[] elements) {
         int index = 1;
-
+        HashMap<String, Integer> map = new HashMap();
+        map.put("1", map.getOrDefault("1",2) + 1);
         for(int i=1; i<=elements.length; i++){
             for(int j=0; j<elements.length; j++){
                 set.add(btk(i, 0, elements,0,j));
