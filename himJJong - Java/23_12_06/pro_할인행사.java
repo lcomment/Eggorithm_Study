@@ -5,7 +5,7 @@ class pro_할인행사 {
         int answer = 0;
 
         HashMap<String, Integer> map = new HashMap<>();
-
+        HashSet<String> s = new HashSet<>();
         int num = 0;
         for(int i=0; i<want.length; i++){
             map.put(want[i], number[i]);
