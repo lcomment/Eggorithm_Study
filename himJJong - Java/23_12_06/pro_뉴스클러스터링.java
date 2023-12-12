@@ -1,55 +1,60 @@
 import java.util.*;
 
 class pro_뉴스클러스터링 {
-    public int solution(String str1, String str2) {
-        ArrayList<String> multiSet1 = new ArrayList<>();
-        ArrayList<String> multiSet2 = new ArrayList<>();
-        ArrayList<String> union = new ArrayList<>();
-        ArrayList<String> intersection = new ArrayList<>();
+    public static void main(String[] args) {
+        String str1 = "aa1+aa2";
+        String str2 = "AAAA12";
+        System.out.println(solution(str1, str2));
+    }
+    static List<String> sum1 = new ArrayList<>();
+    static List<String> sum2 = new ArrayList<>();
+    static List<String> sum3 = new ArrayList<>();
+    static List<String> dup = new ArrayList<>();
+    static public int solution(String str1, String str2) {
+        int answer = 0;
 
-        str1 = str1.toLowerCase();
-        str2 = str2.toLowerCase();
+        String s1 = str1.toLowerCase();
+        String s2 = str2.toLowerCase();
 
-        for(int i = 0 ; i < str1.length() - 1 ; ++i){
-            char first = str1.charAt(i);
-            char second = str1.charAt(i + 1);
 
-            if(first >= 'a' && first <= 'z' && second >= 'a' && second <= 'z'){
-                multiSet1.add(first + "" + second);
+        String[] s1arr = s1.split("");
+        String[] s2arr = s2.split("");
+
+        for(int i=0;i<s1arr.length-1; i++){
+            if(check(s1arr[i], s1arr[i+1])){
+                String collect = s1arr[i] + s1arr[i+1];
+                sum1.add(collect);
             }
         }
 
-        for(int i = 0 ; i < str2.length() - 1 ; ++i){
-            char first = str2.charAt(i);
-            char second = str2.charAt(i + 1);
-
-            if(first >= 'a' && first <= 'z' && second >= 'a' && second <= 'z'){
-                multiSet2.add(first + "" + second);
+        for(int i=0;i<s2arr.length-1; i++){
+            if(check(s2arr[i], s2arr[i+1])){
+                String collect = s2arr[i] + s2arr[i+1];
+                sum2.add(collect);
             }
         }
 
-        Collections.sort(multiSet1);
-        Collections.sort(multiSet2);
-
-        for(String s : multiSet1){
-            if(multiSet2.remove(s)){
-                intersection.add(s);
+        for(String s: sum1){
+            if(sum2.remove(s)){
+                dup.add(s);
             }
-            union.add(s);
+            sum3.add(s);
         }
 
-        for(String s : multiSet2){
-            union.add(s);
+        for(String s : sum2){
+            sum3.add(s);
         }
 
-        double jakard = 0;
-
-        if(union.size() == 0) {
-            jakard = 1;
-        } else {
-            jakard = (double)intersection.size() / (double)union.size();
+        if(sum3.isEmpty() && dup.isEmpty()){
+            return 65536;
         }
 
-        return (int)(jakard * 65536);
+        return (int) (((double) dup.size() / sum3.size()) * 65536);
+    }
+    public static boolean check(String arr, String arr2){
+        if((97<=arr.charAt(0) && arr.charAt(0)<=122)  && (97<=arr2.charAt(0) && arr2.charAt(0)<=122)){
+            return true;
+        }
+        return false;
     }
 }
