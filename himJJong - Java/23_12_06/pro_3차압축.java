@@ -27,10 +27,10 @@ public class pro_3차압축 {
                     }
 
                     String nextKey = msg.substring(i, index + 1);
-
                     if (map.containsKey(nextKey)) {
                         index++;
-                    } else {
+                    }
+                    else {
                         key = msg.substring(i, index);
                         list.add(map.get(key));
                         map.put(nextKey, map.size() + 1);
@@ -44,7 +44,6 @@ public class pro_3차압축 {
             for (int i = 0; i < list.size(); i++) {
                 answer[i] = list.get(i);
             }
-
             return answer;
         }
     }
