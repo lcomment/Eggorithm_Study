@@ -1,7 +1,7 @@
 import java.util.*;
 public class pro_n진수 {
     public static void main(String[] args) {
-        System.out.println(Solution.solution(2,2,2,2));
+        System.out.println(Solution.solution(16,40,2,2));
     }
     static class Solution {
         public static String solution(int n, int t, int m, int p) {
