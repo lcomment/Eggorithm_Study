@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class pro_프렌즈4블록 {
     public static void main(String[] args) {
         int m = 2;
