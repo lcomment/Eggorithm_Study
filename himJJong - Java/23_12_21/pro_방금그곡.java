@@ -2,8 +2,8 @@ import java.util.*;
 
 public class pro_방금그곡 {
     public static void main(String[] args) {
-        String m = "A";
-        String[] music = {"12:00,12:01,Sing,A", "12:00,12:02,Song,A"};
+        String m = "ABC";
+        String[] music = {"12:00,12:14,HELLO,C#DEFGAB", "13:00,13:05,WORLD,ABCDEF"};
         System.out.println(Solution.solution(m, music));
     }
 
