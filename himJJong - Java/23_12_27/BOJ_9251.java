@@ -23,6 +23,11 @@ public class BOJ_9251 {
                 max = Math.max(max, dp[i][j]);
             }
         }
-        System.out.println(max);
+        if(max == 0){
+            System.out.println(max);
+            System.exit(0);
+        }
+
+
     }
 }
