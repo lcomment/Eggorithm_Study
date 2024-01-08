@@ -1,23 +1,23 @@
-
 import java.io.*;
 import java.util.*;
 
-public class SX_1 {
+class SW_1 {
     static class Node {
-        int val;
-        int count;
-        public Node(int val, int count) {
-            this.val = val;
-            this.count = count;
-        }
+    int val;
+    int count;
+    public Node(int val, int count) {
+        this.val = val;
+        this.count = count;
     }
+}
     static ArrayList<Integer>[] list = new ArrayList[10001];
+    static Queue<Node> q;
     static boolean[] visited = new boolean[10001];
-    static int s;
-    static int e;
     static int result;
-    public static void main(String[] args) throws Exception {
+    public static void main(String args[]) throws Exception
+    {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int T = Integer.parseInt(st.nextToken());
@@ -28,17 +28,17 @@ public class SX_1 {
 
         for (int t = 1; t <= T; t++) {
             st = new StringTokenizer(br.readLine());
-            s = Integer.parseInt(st.nextToken());
-            e = Integer.parseInt(st.nextToken());
+            int s = Integer.parseInt(st.nextToken());
+            int e = Integer.parseInt(st.nextToken());
             Arrays.fill(visited, false);
             visited[s] = true;
-            bfs();
-
-            System.out.println("#" + t + " " + result);
+            bfs(s, e);
+            sb.append("#").append(t).append(" ").append(result).append("\n");
         }
+        System.out.println(sb);
     }
-    private static void bfs() {
-        Queue<Node> q = new LinkedList<>();
+    private static void bfs(int s, int e) {
+        q = new LinkedList<>();
         q.add(new Node(s, 0));
 
         while(!q.isEmpty()) {
